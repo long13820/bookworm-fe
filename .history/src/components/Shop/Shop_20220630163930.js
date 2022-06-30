@@ -113,9 +113,11 @@ function Shop(){
                                             <DropdownItem>
                                                 Show 25
                                             </DropdownItem>
+
                                         </DropdownMenu>
                                     </Dropdown>
-                                </div>                      
+                                </div>
+                        
                             </div>
                         </div>
 

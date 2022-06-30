@@ -99,23 +99,10 @@ function Shop(){
                                 </div>
                                 <div>
                                     <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)}>    
-                                        <DropdownToggle caret>
-                                            Show 5
-                                        </DropdownToggle>
-
-                                        <DropdownMenu container="body">
-                                            <DropdownItem>
-                                                Show 15
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Show 20
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Show 25
-                                            </DropdownItem>
-                                        </DropdownMenu>
+                                        
                                     </Dropdown>
-                                </div>                      
+                                </div>
+                        
                             </div>
                         </div>
 

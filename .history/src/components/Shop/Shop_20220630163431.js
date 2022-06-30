@@ -98,24 +98,17 @@ function Shop(){
                                     </Dropdown>
                                 </div>
                                 <div>
-                                    <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)}>    
-                                        <DropdownToggle caret>
-                                            Show 5
-                                        </DropdownToggle>
+                                    <Dropdown isOpen={dropdownOpen} >
 
-                                        <DropdownMenu container="body">
-                                            <DropdownItem>
-                                                Show 15
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Show 20
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Show 25
-                                            </DropdownItem>
-                                        </DropdownMenu>
                                     </Dropdown>
-                                </div>                      
+                                </div>
+                                <div className="dropdown">
+                                    <button className="btn btn-secondary dropdown-toggle font-14px" type="button"
+                                        id="dropdownShowButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Show 20
+                                    </button>
+                                </div>
                             </div>
                         </div>
 

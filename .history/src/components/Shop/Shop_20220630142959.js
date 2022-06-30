@@ -10,20 +10,16 @@ import Book7 from '../../../src/assets/bookcovers/book7.jpg';
 import Book8 from '../../../src/assets/bookcovers/book8.jpg';
 import Book9 from '../../../src/assets/bookcovers/book9.jpg';
 import Book10 from '../../../src/assets/bookcovers/book10.jpg';
-import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from "reactstrap";
 
 
 
 const arraySrcBook = [Book1, Book2, Book3, Book4, Book5, Book6, Book7, Book8, Book9, Book10]
 
 function Shop(){
-
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-
-    const [dropdownSort, setDropdownSortOpen] = useState(false);
-    return (
+return (
 
 
+    
     <section className="shop-page flex-grow-1">
         <div className="container">
             <div className="title-page">
@@ -80,42 +76,26 @@ function Shop(){
                             </div>
                             <div className="col-lg-6 d-flex justify-content-end">
                                 <div className="dropdown me-4">
-                                    <Dropdown isOpen={dropdownSort} toggle={() => setDropdownSortOpen(prevState => !prevState)}>
-                                        <DropdownToggle caret>
-                                            Sort by sale
-                                        </DropdownToggle>
-                                        <DropdownMenu container="body">
-                                            <DropdownItem>
-                                                Sort by popularity
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Sort by price: low to high
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Sort by price: high to low
-                                            </DropdownItem>
-                                        </DropdownMenu>
-                                    </Dropdown>
+                                    <button className="btn btn-secondary dropdown-toggle font-14px" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Sort by on sale
+                                    </button>
+                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a className="dropdown-item" href="#">Sort by on sale</a>
+                                        <a className="dropdown-item" href="#">Sort by popularity</a>
+                                        <a className="dropdown-item" href="#">Sort by price: low to high</a>
+                                        <a className="dropdown-item" href="#">Sort by price: high to low</a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)}>    
-                                        <DropdownToggle caret>
-                                            Show 5
-                                        </DropdownToggle>
 
-                                        <DropdownMenu container="body">
-                                            <DropdownItem>
-                                                Show 15
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Show 20
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Show 25
-                                            </DropdownItem>
-                                        </DropdownMenu>
-                                    </Dropdown>
-                                </div>                      
+                                <div className="dropdown">
+                                    <button className="btn btn-secondary dropdown-toggle font-14px" type="button"
+                                        id="dropdownShowButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Show 20
+                                    </button>
+                                </div>
                             </div>
                         </div>
 

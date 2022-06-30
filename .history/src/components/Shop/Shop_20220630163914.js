@@ -107,15 +107,10 @@ function Shop(){
                                             <DropdownItem>
                                                 Show 15
                                             </DropdownItem>
-                                            <DropdownItem>
-                                                Show 20
-                                            </DropdownItem>
-                                            <DropdownItem>
-                                                Show 25
-                                            </DropdownItem>
                                         </DropdownMenu>
                                     </Dropdown>
-                                </div>                      
+                                </div>
+                        
                             </div>
                         </div>
 

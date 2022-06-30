@@ -115,7 +115,8 @@ function Shop(){
                                             </DropdownItem>
                                         </DropdownMenu>
                                     </Dropdown>
-                                </div>                      
+                                </div>
+                        
                             </div>
                         </div>
 

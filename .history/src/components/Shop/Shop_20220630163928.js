@@ -111,11 +111,13 @@ function Shop(){
                                                 Show 20
                                             </DropdownItem>
                                             <DropdownItem>
-                                                Show 25
+                                                Show 15
                                             </DropdownItem>
+
                                         </DropdownMenu>
                                     </Dropdown>
-                                </div>                      
+                                </div>
+                        
                             </div>
                         </div>
 
