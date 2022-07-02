@@ -10,7 +10,6 @@ import Title from './components/Title/Title';
 import Footer from './pages/Footer/Footer';
 import Header from './pages/Header/Header';
 import { config } from '@fortawesome/fontawesome-svg-core';
-
 config.autoAddCss  = false;
 
 const pathname = window.location.pathname;

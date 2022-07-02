@@ -14,12 +14,12 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss  = false;
 
 const pathname = window.location.pathname;
-const objectPath = {
+const objectPath = [
   '/': 'Homepage',
   '/shop': 'Books',
   '/about': 'About us',
   '/cart': 'Cart'
-};
+];
 
 
 function App() {

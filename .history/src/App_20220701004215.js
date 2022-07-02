@@ -9,17 +9,8 @@ import Shop from './components/Shop/Shop';
 import Title from './components/Title/Title';
 import Footer from './pages/Footer/Footer';
 import Header from './pages/Header/Header';
-import { config } from '@fortawesome/fontawesome-svg-core';
 
-config.autoAddCss  = false;
-
-const pathname = window.location.pathname;
-const objectPath = {
-  '/': 'Homepage',
-  '/shop': 'Books',
-  '/about': 'About us',
-  '/cart': 'Cart'
-};
+const pathname = window.location.
 
 
 function App() {
@@ -28,8 +19,7 @@ function App() {
       <div className='d-flex flex-column m-height-100'>
         <Header/>
         
-        {/* <Title title="About"/> */}
-        {pathname === '/about' ? <Title title={objectPath[pathname]}/> : ''}
+        <Title title="About"/>
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/shop' element={<Shop/>} />
