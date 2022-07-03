@@ -55,16 +55,11 @@ export default class Shop extends React.Component{
     }
 
     toggle(){
-        this.setState((prevState) => ({
-            dropdownOpen : !prevState.dropdownOpen
-        }));
+        this.setState((prevState) => {
+            dropdownOpen : !prevState.dropdownOpen;
+        })
     }
 
-    show(){
-        this.setState((prevState) => ({
-            dropdownShow : !prevState.dropdownShow
-        }));
-    }
 
     handlePageChange(pageNumber){
         axios.get(`http://localhost:8000/api/books?paginate=${this.state.paginate}&page=${pageNumber}`)
@@ -221,7 +216,7 @@ export default class Shop extends React.Component{
                                     </Dropdown>
                                 </div>
                                 <div>
-                                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>    
+                                    <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)}>    
                                         <DropdownToggle caret>
                                             Show 5
                                         </DropdownToggle>
@@ -244,7 +239,7 @@ export default class Shop extends React.Component{
 
                         <div id="mainRow" className="row">
                             {
-                            this.state.allBooks.map((book) => {
+                            this.state.allBooks.map(book => {
                             return (
                             <div className="col-lg-3 col-md-4 col-sm-6 mb-4" key={book}>
                                 <div className="card">

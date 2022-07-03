@@ -61,9 +61,7 @@ export default class Shop extends React.Component{
     }
 
     show(){
-        this.setState((prevState) => ({
-            dropdownShow : !prevState.dropdownShow
-        }));
+        this.setState
     }
 
     handlePageChange(pageNumber){
@@ -244,7 +242,7 @@ export default class Shop extends React.Component{
 
                         <div id="mainRow" className="row">
                             {
-                            this.state.allBooks.map((book) => {
+                            this.state.allBooks.map(book => {
                             return (
                             <div className="col-lg-3 col-md-4 col-sm-6 mb-4" key={book}>
                                 <div className="card">

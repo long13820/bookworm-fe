@@ -36,13 +36,10 @@ export default class Shop extends React.Component{
     // const [dropdownSort, setDropdownSortOpen] = useState(false);
     constructor(props){
         super(props);
-        this.toggle = this.toggle.bind(this);
-        this.show = this.show.bind(this);
+        this.to
         this.state = {
             allBooks:[],
             defaultBooks:[],
-            dropdownOpen:false,
-            dropdownShow: false,
             activePage: 1,
             itemCountPerPage:1,
             totalItemCount:1,
@@ -52,18 +49,6 @@ export default class Shop extends React.Component{
         };
         
         this.handlePageChange = this.handlePageChange.bind(this);
-    }
-
-    toggle(){
-        this.setState((prevState) => ({
-            dropdownOpen : !prevState.dropdownOpen
-        }));
-    }
-
-    show(){
-        this.setState((prevState) => ({
-            dropdownShow : !prevState.dropdownShow
-        }));
     }
 
     handlePageChange(pageNumber){
@@ -203,7 +188,7 @@ export default class Shop extends React.Component{
                             </div>
                             <div className="col-lg-6 d-flex justify-content-end">
                                 <div className="dropdown me-4">
-                                    <Dropdown isOpen={this.state.dropdownShow} toggle={this.show}>
+                                    {/* <Dropdown isOpen={dropdownSort} toggle={() => setDropdownSortOpen(prevState => !prevState)}>
                                         <DropdownToggle caret>
                                             Sort by sale
                                         </DropdownToggle>
@@ -221,7 +206,7 @@ export default class Shop extends React.Component{
                                     </Dropdown>
                                 </div>
                                 <div>
-                                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>    
+                                    <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)}>    
                                         <DropdownToggle caret>
                                             Show 5
                                         </DropdownToggle>
@@ -237,14 +222,14 @@ export default class Shop extends React.Component{
                                                 Show 25
                                             </DropdownItem>
                                         </DropdownMenu>
-                                    </Dropdown>
+                                    </Dropdown> */}
                                 </div>                      
                             </div>
                         </div>
 
                         <div id="mainRow" className="row">
                             {
-                            this.state.allBooks.map((book) => {
+                            this.state.allBooks.map(book => {
                             return (
                             <div className="col-lg-3 col-md-4 col-sm-6 mb-4" key={book}>
                                 <div className="card">
