@@ -186,7 +186,7 @@ export default class Shop extends React.Component{
                                     />
                                 </div>
                                 <div>
-                                   <MyDropdown title="Show: 5" list={["Show: 15","Show: 20", "Show: 25"]}/>
+                                   <MyDropdown title="Show: 5" list={[]}/>
                                 </div>                      
                             </div>
                         </div>
@@ -210,7 +210,7 @@ export default class Shop extends React.Component{
                             }
                         </div>
 
-                            <div className="d-flex justify-content-center">
+                            <div className="col-12 d-flex justify-content-center">
                                 <Pagination 
                                     activePage={this.state.activePage}
                                     itemsCountPerPage={this.state.itemCountPerPage}

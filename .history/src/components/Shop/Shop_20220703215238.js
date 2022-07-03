@@ -210,7 +210,7 @@ export default class Shop extends React.Component{
                             }
                         </div>
 
-                            <div className="d-flex justify-content-center">
+                            <div className="col-12 d-flex justify-content-center">
                                 <Pagination 
                                     activePage={this.state.activePage}
                                     itemsCountPerPage={this.state.itemCountPerPage}

@@ -15,7 +15,6 @@ import defaultBookCover from '../../assets/bookcovers/defaultBookCover.png';
 import Pagination from "react-js-pagination";
 import axios from "axios";
 import MyDropdown from "../Dropdown/MyDropdown";
-import MyAccordion from "../MyAccordion/MyAccordion";
 
 
 const objectBookCover = {
@@ -161,7 +160,40 @@ export default class Shop extends React.Component{
                         <p className="bl-filter font-14px">Filter by</p>
 
                         <div className="bl-main-filter">
-                            <MyAccordion/>
+                            {/*
+                            <!-- Category --> */}
+                            <div className="blmf-card">
+                                <p className="blmfc-title">Category</p>
+                                <ul className="blmfc-list">
+                                    <li>category_name</li>
+                                    <li>Category #1</li>
+                                    <li>Category #2</li>
+                                </ul>
+                            </div>
+
+                            {/*
+                            <!-- Author --> */}
+                            <div className="blmf-card">
+                                <p className="blmfc-title">Author</p>
+                                <ul className="blmfc-list">
+                                    <li>author_name</li>
+                                    <li>Author #1</li>
+                                    <li>Author #2</li>
+                                </ul>
+                            </div>
+
+                            {/*
+                            <!-- Rating --> */}
+                            <div className="blmf-card">
+                                <p className="blmfc-title">Rating Review</p>
+                                <ul className="blmfc-list">
+                                    <li>1 Star</li>
+                                    <li>2 Star</li>
+                                    <li>3 Star</li>
+                                    <li>4 Star</li>
+                                    <li>5 Star</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -173,20 +205,26 @@ export default class Shop extends React.Component{
                             </div>
                             <div className="col-lg-6 d-flex justify-content-end">
                                 <div className="dropdown me-3">
-                                    <MyDropdown 
-                                        title = "Sort by" 
-                                        list = {
-                                            [
-                                                "Sort by on sale",
-                                                "Sort by popularity",
-                                                "Sort by price: low to high",
-                                                "Sort by price: high to low" 
-                                            ]
-                                        }
-                                    />
+                                    <MyDropdown />
                                 </div>
                                 <div>
-                                   <MyDropdown title="Show: 5" list={["Show: 15","Show: 20", "Show: 25"]}/>
+                                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>    
+                                        <DropdownToggle caret>
+                                            Show 5
+                                        </DropdownToggle>
+
+                                        <DropdownMenu container="body">
+                                            <DropdownItem>
+                                                Show 15
+                                            </DropdownItem>
+                                            <DropdownItem>
+                                                Show 20
+                                            </DropdownItem>
+                                            <DropdownItem>
+                                                Show 25
+                                            </DropdownItem>
+                                        </DropdownMenu>
+                                    </Dropdown>
                                 </div>                      
                             </div>
                         </div>
@@ -210,7 +248,7 @@ export default class Shop extends React.Component{
                             }
                         </div>
 
-                            <div className="d-flex justify-content-center">
+                            <div className="col-12 d-flex justify-content-center">
                                 <Pagination 
                                     activePage={this.state.activePage}
                                     itemsCountPerPage={this.state.itemCountPerPage}

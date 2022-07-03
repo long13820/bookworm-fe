@@ -27,7 +27,7 @@ function App() {
   return (
     <React.Fragment>
       <div className='d-flex flex-column m-height-100'>
-        <Header ref={headerRef}/>
+        <Header/>
         
         {/* <Title title="About"/> */}
         {pathname === '/about' ? <Title title={objectPath[pathname]}/> : ''}

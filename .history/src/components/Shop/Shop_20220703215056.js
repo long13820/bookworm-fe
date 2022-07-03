@@ -186,7 +186,23 @@ export default class Shop extends React.Component{
                                     />
                                 </div>
                                 <div>
-                                   <MyDropdown title="Show: 5" list={["Show: 15","Show: 20", "Show: 25"]}/>
+                                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>    
+                                        <DropdownToggle caret>
+                                            Show 5
+                                        </DropdownToggle>
+
+                                        <DropdownMenu container="body">
+                                            <DropdownItem>
+                                                Show 15
+                                            </DropdownItem>
+                                            <DropdownItem>
+                                                Show 20
+                                            </DropdownItem>
+                                            <DropdownItem>
+                                                Show 25
+                                            </DropdownItem>
+                                        </DropdownMenu>
+                                    </Dropdown>
                                 </div>                      
                             </div>
                         </div>
@@ -210,7 +226,7 @@ export default class Shop extends React.Component{
                             }
                         </div>
 
-                            <div className="d-flex justify-content-center">
+                            <div className="col-12 d-flex justify-content-center">
                                 <Pagination 
                                     activePage={this.state.activePage}
                                     itemsCountPerPage={this.state.itemCountPerPage}

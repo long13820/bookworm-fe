@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import React, { useRef } from 'react';
+import React from 'react';
 import About from './components/About/About';
 import Cart from './components/Cart/Cart';
 import Home from './components/Home/Home';
@@ -23,11 +23,11 @@ const objectPath = {
 
 
 function App() {
-  const headerRef = useRef();
+  const 
   return (
     <React.Fragment>
       <div className='d-flex flex-column m-height-100'>
-        <Header ref={headerRef}/>
+        <Header/>
         
         {/* <Title title="About"/> */}
         {pathname === '/about' ? <Title title={objectPath[pathname]}/> : ''}
